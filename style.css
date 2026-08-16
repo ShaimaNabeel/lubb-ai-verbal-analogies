@@ -1,0 +1,889 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=National+Park:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.national-park{
+    font-family: "National Park", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+/*____________________________________________________________*/  
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+#footer{
+    background:
+    linear-gradient(
+       to bottom,
+       #FFFFFF 0%,
+       #A8D0CF 100%
+   ); 
+}
+*:focus {
+    outline: none !important;
+}
+
+html {
+	font-size: 10px;
+	font-family:'Times New Roman', Times, serif;
+	scroll-behavior: smooth;
+}
+body{
+    background-color: #FFFFFF;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.brand h1 {
+	font-size: 4rem;
+	text-transform: uppercase;
+	color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: "Lilita One", sans-serif;
+}
+
+/*___________________________________________________________________________________________*/
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+    z-index: 1000;
+    background: transparent;    
+}
+#header .header {
+	min-height: 8vh;
+	background-color:transparent ;
+    transition: background-image 0.3s ease, background-color 0.3s ease;
+      
+}
+
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0;
+} 
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+    /*color burger*/
+	background-color: #A8D0CF;
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+    margin-right: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: #Ffffff;
+	text-transform: uppercase;
+	padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+    margin-bottom: 20px;
+	display: block;
+
+}
+#header .nav-list .ar {
+    font-family: 'amiri-quran', sans-serif; /* أضف خطوط احتياطية */
+    font-size: 2.5rem; /* حجم مناسب للعربية */
+    letter-spacing: 0; /* إزالة التباعد للحروف العربية */
+    font-weight: normal;
+}
+.ar {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    line-height: 1.8; /* تحسين تباعد الأسطر */
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+    /*bg burger*/
+	color:  #B7D9D8;
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: #000
+}
+#header .hamburger {
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	border: 3px solid #F3F4F5;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+    margin-top: 5px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid #F3F4F5;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 25px;
+	position: relative;
+	background-color: #F3F4F5;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: #F3F4F5;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+
+/* End Header section */
+/*_____________________________________________________________________________________________*/
+/* home section */
+#home{
+    background:
+     linear-gradient(
+        to top,
+        #FFFFFF 0%,
+        #A8D0CF 100%
+    ); 
+    /* 
+    /*      #B2D6D6 20%,
+        #B7D9D8 40%,
+        #ADD4D3 70%,*/
+    padding-top: 0px;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+.custom-shape-divider-top-1744293399 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1744293399 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1744293399 .shape-fill {
+    fill: #A8D0CF;
+}
+
+
+.custom-shape-divider-top-1744293448 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -2;
+}
+
+.custom-shape-divider-top-1744293448 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 250px;
+}
+
+.custom-shape-divider-top-1744293448 .shape-fill {
+    fill: #ADD4D3;
+}
+.custom-shape-divider-top-1744293625 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -3;
+}
+
+.custom-shape-divider-top-1744293625 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 350px;
+}
+
+.custom-shape-divider-top-1744293625 .shape-fill {
+   fill: #B7D9D8;
+}
+.custom-shape-divider-top-1744293683 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -4;
+}
+
+.custom-shape-divider-top-1744293683 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 450px;
+}
+
+.custom-shape-divider-top-1744293683 .shape-fill {
+    fill: #C6E0E0;
+}
+.custom-shape-divider-top-1744293760 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -5;
+}
+
+.custom-shape-divider-top-1744293760 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 550px;
+}
+
+.custom-shape-divider-top-1744293760 .shape-fill {
+    fill: #d2e9e8;
+}
+.home-image img {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    border: none;
+    margin-left: 10% !important;
+}
+#home::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#home .container {
+    justify-content: flex-start; /* بدلاً من center */
+    padding-left: 7% !important ; /* إضافة مسافة من اليسار */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+    justify-content: flex-start;
+}
+#home h1 {
+    padding-top: 15%;
+    display: inline-block;
+    width: fit-content;
+    font-size: 12rem;
+    position: relative;
+    text-align: left;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: "Lilita One", sans-serif;
+    color:#fff;
+}
+#home .home-text{
+    margin-bottom: 200px;
+}
+
+#home h2{
+    display: block;
+    width: fit-content;
+    font-size: 2.8rem;
+    position: relative;
+    text-align: left; 
+    margin-left: 0px;  
+    color: #000;
+    font-family:  "Varela Round", sans-serif;
+}
+#home h3{
+    display: block;
+    width: fit-content;
+    font-size: 2rem;
+    position: relative;
+    text-align: left; 
+    margin-left: 0px;  
+    color: #000;
+    font-family: "National Park", sans-serif;
+}
+
+#home .cta{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #EF5E7B;
+    background-color: transparent;
+    border: 2.3px solid #EF5E7B;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#home .cta:hover {
+    color: #F3F4F5;
+    background-color: #EF5E7B;
+}
+/* end home section */
+/*______________________________________________________________________________________________*/
+/* services section */
+#services .service{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#services .service-top{
+    width: 599px;
+    margin: 0 auto;
+}
+#services .section-title{
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#services .service-buttom{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#services .service-item_1,
+#services .service-item_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+   
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.image-container {
+    height: 260px; /* أو أقل حسب رغبتك */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.image-container1 {
+    height: 265px; /* أو أقل حسب رغبتك */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:  0;
+
+}
+.fullscreen-image,
+.fullscreen-image1 {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+
+#services .service-item_1::after {
+    background: linear-gradient(to bottom, #ffffff 20%,#d2e9e8 100%);
+    content: ''; /* إضافة هذه الخاصية */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+#services .service-item_2::after {
+    background: linear-gradient(to bottom, #ffffff 20%, #d2e9e8 100%);
+    content: ''; /* إضافة هذه الخاصية */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    z-index: -1;
+   
+}
+
+#services .text-container::after{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* تمركز عمودي */
+    align-items: center; /* تمركز أفقي */
+    text-align: center; /* توسيط النص داخل العناصر */
+    height: 100%; /* لضمان تمركز عمودي */
+    transition: all 0.3s ease;
+   
+}
+
+  
+  /* تفعيل التمركز عند المرور أو النقر */
+  .service-item_1 :hover .text-container,
+  .service-item_2:hover .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+#services .service-item_1 h2,
+#services .service-item_2 h2 {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+#services .service-item_1 h3,
+#services .service-item_2 h3{
+    font-size: 2rem;
+    color:#A8D0CF;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+    overflow: hidden;
+}
+#services .service-item_1 p,
+#services .service-item_2 p {
+    font-size: 1.8rem;
+    color: rgb(67, 66, 66);
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+    overflow: hidden;
+}
+#services .service-item_1:hover p ,
+#services .service-item_2:hover p {
+    opacity: 1;
+    max-height: 200px; /* حسب طول المحتوى */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* تمركز عمودي */
+    align-items: center; /* تمركز أفقي */
+    text-align: center; /* توسيط النص داخل العناصر */
+    height: 100%; /* لضمان تمركز عمودي */
+    transition: all 0.3s ease;
+}
+#services .service-item_1:hover h2,
+#services .service-item_2:hover h2 {
+margin-top: 50px;
+}
+#services .service-item_1:hover h3,
+#services .service-item_2:hover h3 {
+    opacity: 1;
+    max-height: 400px; /* حسب طول المحتوى */
+    justify-content: center;
+    align-items: center;
+}
+#services .service-item_1:hover img,
+#services .service-item_2:hover img {
+    opacity: 0;
+    z-index: -1;
+}
+
+
+/* end services section */
+/*_________________________________________________________________________________________*/
+/* about us section */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    margin-bottom: 20px;
+    color: #A8D0CF;
+}
+
+#about .about_text{
+    width: 100%;
+}
+#about .section-title{
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#about .about_text h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family:'Libre Baskerville Italic'
+}
+#about .about_text p{
+    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+#about .container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+/* end about us section */
+/*_________________________________________________________________________________________________________*/
+
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes overlay{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        left: 100%;
+        width: 0;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: black;
+    }
+}
+
+/* media query for desktop*/
+@media (max-width: 768px) {
+    .brand h1 {
+        display: none;
+    }
+    .header-wrapper h1.header__heading {
+        display: none;
+    }
+    .home-image {
+        display: none;
+    }
+    image-container{
+        display: none;
+    }
+    @media (max-width: 768px) {
+        #services .service-buttom {
+            grid-template-columns: 1fr;
+            padding: 0 10px;
+        }
+        
+        #home .container {
+            flex-direction: column;
+            padding: 20px;
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+	#services .service-bottom .service-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
+@media screen and (max-width: 768px) {
+    .fullscreen-image {
+      display: none;
+    }
+    .image-container{
+        display: none;
+    }
+    .text-container{
+        align-items: center;
+        margin-right: 40px !important;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px !important;
+    }
+    .text-container h2{
+        font-size: 4rem !important;
+        white-space: nowrap !important;
+    }
+    .text-container h3{
+        font-size: 2rem !important;
+        white-space: nowrap !important;
+    }
+    .text-container p{
+        display: contents !important;
+        font-size: 1.6rem !important;
+    }
+    .text-container .cta{
+        margin-top: 15px !important;
+        font-size: 2rem;
+    }
+    .cta {
+        align-self: center;
+    }
+  *{
+        align-self: center;
+    }
+    .about_text{
+        align-items: center;
+        margin-right: 10px !important;
+        max-width: 1200px !important;
+    }
+    .about_text h1{
+        font-size: 3.5rem !important;
+    }
+    .about_text p,
+    .about_text h2{
+        align-self: center;
+        font-size: 1.5rem !important;
+       
+    }
+    .about_text h2{
+        font-size: 2rem !important;
+    }
+  }
+
+/* إعدادات الاستجابة للهواتف */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px; /* عرض صغير جدًا افتراضيًا */
+    }
+    .sidebar li .icon {
+        margin: 0 auto; /* توسيط الأيقونات */
+    }
+
+}
+
+
+
+/* ✅ شاشات متوسطة مثل التابلت */
+@media (max-width: 1024px) {
+    #services .section-title {
+      font-size: 3rem;
+    }
+  
+    #services .service-item_1 h2,
+    #services .service-item_2 h2 {
+      font-size: 2.4rem;
+    }
+  
+    #services .service-item_1 h3,
+    #services .service-item_2 h3 {
+      font-size: 1.8rem;
+    }
+  
+    #services .service-item_1 p,
+    #services .service-item_2 p {
+      font-size: 1.5rem;
+    }
+  
+    .image-container,
+    .image-container1 {
+      height: 200px;
+    }
+  
+    #services .service-buttom {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ✅ شاشات صغيرة مثل الجوال */
+  @media (max-width: 600px) {
+    #services {
+      padding: 50px 0;
+    }
+  
+    #services .section-title {
+      font-size: 2.2rem;
+    }
+  
+    #services .service-top {
+      width: 90%;
+    }
+  
+    #services .service-item_1 h2,
+    #services .service-item_2 h2 {
+      font-size: 2rem;
+    }
+  
+    #services .service-item_1 h3,
+    #services .service-item_2 h3 {
+      font-size: 1.6rem;
+    }
+  
+    #services .service-item_1 p,
+    #services .service-item_2 p {
+      font-size: 1.3rem;
+    }
+  
+    .image-container,
+    .image-container1 {
+      height: 160px;
+    }
+  }
+  

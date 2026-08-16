@@ -1,0 +1,1117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=National+Park:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.national-park{
+    font-family: "National Park", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+/*__________________________________________________*/
+* {
+    font-family: 'poppins',sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    
+}
+*:focus {
+    outline: none !important;
+}
+
+#bg {
+    position: relative;
+    z-index: 1;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #FFFFFF 0%, #A8D0CF 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  body.dark{
+    background: linear-gradient(to top,  #3b3b3b 0%, #212121 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  
+:root{
+    --sidebar-color:#FFF;
+    --primary-color:#695cfe;
+    --primary-color-light:#f6f5ff;
+    --toggle-color:#ddd;
+    --text-color:#707070;
+
+    --tran-02: all .2s ease;
+    --tran-03: all .3s ease;
+    --tran-04: all .4s ease;
+    --tran-05: all .5s ease;
+
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    transition: var(--tran-02);
+}
+body.dark{
+    --sidebar-color:#242525;
+    --primary-color:#3a3b3c;
+    --primary-color-light:#3a3b3c;
+    --toggle-color:#fff;
+    --text-color:#ccc;
+}
+.sidebar{
+    background-attachment: fixed;
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 1;
+}
+
+.sidebar.close{
+    width: 90px;
+}
+.sidebar.close .text{
+    font-size: 0px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.sidebar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.sidebar li .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 2.5rem;
+}
+.sidebar li .icon,
+.sidebar li .text{
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+.sidebar li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover .text,
+.sidebar li a:hover .icon{
+    color: #A8D0CF;
+}
+body.dark .sidebar li a:hover .text,
+body.dark .sidebar li a:hover .icon{
+    color:#A8D0CF;
+}
+.sidebar header{
+    position: relative;
+}
+.sidebar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-03);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.name h1,
+.name h2{
+    padding-right: 10%34;
+    display: inline-block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    text-align: left;
+    margin-left: -3px;
+    font-weight: bold;
+    font-family:  "Lilita One", sans-serif;
+    color:#A8D0CF ;
+}
+header .header-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.close header .toggle{
+    transform: translateY(-50%) rotate(180deg);
+}
+body.dark .sidebar header .toggle{
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--text-color);
+}
+
+  .sidebar .bottom-content .mode{
+    padding-top: 320px;
+  }
+  .sidebar.close .bottom-content .mode{
+    padding-top: 350px;
+  }
+    li.mode {
+        display: flex;
+        align-items: center;
+        padding: 12px 14px;
+        gap: 14px;
+        margin-top: 20px;
+        justify-content: space-between;
+      }
+      
+      li.mode .mode-text {
+        flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
+        margin-left: -35px;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      li.mode .icon {
+        font-size: 2.5rem;
+        min-width: 25px;
+        text-align: center;
+      }
+      
+  /* أيقونة الوضع */
+.mode .icon i {
+    transition: var(--tran-03) !important;
+  }
+  
+  /* الوضع الليلي: غيّر الأيقونة إلى شمس */
+  body.dark .mode .icon i {
+     /* FontAwesome sun icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--text-color) !important; /* تأكيد لون الأيقونة */
+  }
+  .moon-sun .moon {
+  display: inline;
+}
+.moon-sun .sun {
+  display: none;
+}
+body.dark .moon-sun .moon {
+  display: none;
+}
+body.dark .moon-sun .sun {
+  display: inline;
+}
+.menu-bar .mode .moon-sun{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+.menu-bar .mode i{
+    position: absolute;
+    
+}
+.menu-bar .mode i.sun {
+    opacity: 0;
+}
+body.dark .menu-bar .mode i.sun {
+    opacity: 1;
+}
+.menu-bar .mode .toggle-switch{
+    position: absolute;
+    right: 0;
+    display: flex;
+    border-radius: 20px;
+    width: 50px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: -2100px;
+
+}
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    background: var(--toggle-color);
+    border-radius: 25px;
+    transition: var(--tran-04);
+    margin-left: -75px;
+
+  }
+  .switch::before {
+    content: ''; /* هذا ضروري لإظهار العنصر */
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+    
+}
+
+body.dark .switch::before{
+    left: 24px;
+}
+.sidebar.close .toggle-switch{
+    display: none;
+  }
+
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+
+
+
+body.dark #bg{
+   background: linear-gradient(
+    to top,
+    #262626 0%,
+    #121212 100%
+   );
+}
+body.dark .home-text textarea,
+body.dark .home-text input{
+  background-color: #363636;
+  border: 1px solid #363636;
+  color: white;
+}
+/*___________________________________________________________________________________________*/
+
+/* إضافة هذا الكود لملف CSS الخاص بك */
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in; /* تأثير ظهور */
+    margin: 0 auto; /* توسيط أفقي */
+    max-width: 900px; /* عرض مثالي للقراءة */
+    position: relative; /* لتحديد سياق الـ z-index */
+    min-height: 80vh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.slover {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-left: 0px;
+    padding-right: 1px;
+    align-items: flex-end;  
+    margin: 40px auto; /* توسيط أفقي مع مسافة */
+    position: relative; 
+    z-index: 2; /* أعلى من العناصر الزخرفية */
+}
+.welcome {
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* إضافة ظل للنص */
+    gap: 2px;
+}
+
+body.dark .welcome {
+   color: #aaaaaa; 
+}
+h1.welcome{
+    position: sticky;
+    font-size: 55px; /* أو الحجم اللي يناسبك */
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: -10px;
+}
+.home-text button.cta {
+    align-self: flex; /* محاذاة لليمين */
+    margin-right: -67rem; /* نفس هامش الـ input */
+    width: 120px; /* عرض مناسب */
+    margin-top: -50px; /* مسافة من الأعلى */
+    z-index: 10;
+}
+
+.welcome h3 {
+    font-size: 6rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.brand {
+    color: var(--sidebar-color);
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    font-family:  "Lilita One"  !important;
+    font-size: 6rem;
+    text-shadow: #212121 !important;
+    text-decoration: none;
+    letter-spacing: 1px; /* إزالة التباعد للحروف العربية */
+
+    
+}
+
+body.dark .brand {
+    color: #A8D0CF;
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .home-text {
+        min-height: 50vh;
+        padding: 1rem;
+    }
+    
+    .welcome h1 {
+        font-size: 3rem;
+    }
+    
+    .welcome h3 {
+        font-size: 1.6rem;
+    }
+}
+/* توسّط محتوى الهوم */
+.home.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* لتوجيه المحتوى للأعلى */
+    min-height: 100vh;
+    text-align: center;
+    font-family:serif;
+    padding: 20px 0;
+    width: 1000px;
+/* يمكنك تغيير القيمة لتحديد المسافة من الأعلى */
+}
+/* إضافة هذه التعديلات */
+ 
+  /* تصميم النموذج */
+  .slover {
+    padding: 20px;
+    position:static;
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 1rem; 
+   
+  }
+  
+  /* تحسين شكل الإدخال والزر */  
+.home-text input,
+.home-text textarea {
+    resize: none; /* يمنع تغيير الحجم تمامًا */
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+    overflow-y: auto;
+    padding-bottom: 80px;
+}
+
+.home-text textarea::-webkit-scrollbar {
+    width: 18px !important; /* عرض السكرولبار */
+}
+.home-text textarea::-webkit-scrollbar-thumb {
+    background: #A8D0CF !important; /* لون السكرولبار */
+    border-radius: 6px !important; /* حواف دائرية */
+    border: 2px solid transparent !important; /* حدود شفافة */
+
+}
+
+.home-text textarea::-webkit-scrollbar-track {
+    background: rgba(168, 208, 207, 0.1) !important; /* لون الخلفية */
+    border-radius: 6px !important;
+    height: 10px;
+    padding: 10px;
+}
+
+
+
+.home-text {
+    position: relative;
+  }
+  
+.model-box {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 30px; /* أو حسب مكانك المفضل */
+    z-index: 4;
+}
+
+.model-box button {
+    width: 150px !important;                   /* تثبيت العرض */
+    padding: 8px 12px;              /* مسافة داخلية */ /* لون خفيف جدًا */
+    color: var(--text-color);       /* لون النص */
+    border: none;
+    border-radius: 8px;             /* حواف ناعمة */
+    cursor: pointer;
+    display: flex;                  /* لترتيب النص والأيقونة */
+    align-items: center;
+    justify-content: center; /* النص يسار والأيقونة يمين */
+    font-size: 2rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: transparent;
+}
+
+
+.model-box a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px;
+}
+.model-box .model-selector {
+    position: absolute;
+    top: 34px;               /* أسفل الزر مباشرة */
+    right: 3px;                /* في أقصى اليمين */
+    left: auto;
+    display: none;
+    background-color: var(--sidebar-color);
+    min-width: 140px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.082);
+    z-index: 999;   
+    font-size: 1.5rem;   
+    text-align: center; 
+    align-items: center;     /* مهم لو في عناصر تغطي عليها */
+}
+
+.model-box:hover .model-selector {
+    display: block;
+}
+
+.model-box:hover button {
+    color: snow;
+    text-decoration-color: snow;
+    
+}
+.model-box:hover button .label {
+    text-decoration-color: var(--sidebar-color);
+    
+}
+.model-box button .label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.model-box button i {
+    transition: transform 0.3s ease;
+}
+
+
+body.dark .model-box .model-selector{
+    background-color: var(--sidebar-color);
+}
+.model-box a:hover {
+    color: #A8D0CF;
+}
+.model .updated {
+    background-color: #4CAF50; /* لون خلفية */
+    transform: scale(1.05); /* تكبير الزر قليلاً */
+    transition: all 0.3s ease; /* حركة سلسة */
+  }
+  a.new-option {
+    color: #e74c3c !important; /* لون النص */
+    font-weight: bold;
+    animation: fadeIn 0.5s; /* ظهور تدريجي */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+.home-text button.cta {
+    background-color: #A8D0CF;
+    padding: 0.4rem;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;            /* Enable flexbox */
+    align-items: center;      /* Vertically center the icon */
+    justify-content: center;  /* Horizontally center the icon */
+    gap: 8px;                 /* Optional: Add some space between icon and text if needed */
+}
+
+.home-text button.cta i {
+    font-size: 2.5rem;        /* Icon size */
+    display: inline-block;
+    position: fixed;
+}
+
+.home-text button.cta:hover {
+    background-color: transparent;
+    color:#A8D0CF;
+    border: 1px solid #A8D0CF;
+}
+
+  body.dark .home-text button.cta {
+    background-color: #3b3b3b;
+    color: #ccc;
+  }
+  
+  body.dark .home-text button.cta:hover {
+    background-color: transparent;
+    color: #A8D0CF;
+    border: 1px solid #A8D0CF;
+  }
+  
+
+  /* لو عندك كلاس cta لحاله برا context */
+  .cta .icon {
+    font-size: 1.2em;
+    display: inline-block;
+  }
+  
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* أو جرب flex-start إذا تبي النصوص تصطف بشكل طبيعي */
+    gap: 2px;
+    padding: 30px 20px;
+    width: 1000px;
+}
+.home-text h1 {
+    color: #333;
+}
+
+body.dark .home-text h1 {
+    color: #f5f5f5;
+}
+
+
+
+.home-text,
+.slover {
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.slover label {
+    position: static;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 500;
+    align-self: flex-start;
+}
+body.dark .slover label {
+    color: #ccc;
+}
+body.dark .slover .placeholder{
+    color:#333;
+}
+.home-text input[type="text"],
+.home-text textarea {
+    width: 700px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: var(--sidebar-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-text input[type="text"]:focus,
+.home-text textarea:focus {
+    border-color: #3F9896;
+    box-shadow: 0 0 8px #3F9896;
+    outline: none;
+}
+body.dark .home-text input[type="text"]:focus,
+body.dark .home-text textarea:focus {
+    border-color:#212121;
+    box-shadow: 0 0 8px #212121;
+    outline: none;
+}
+
+.home-text textarea {
+    min-height: 100px;
+    max-height: 300px;
+}
+body.dark input{
+    color: white; /* لون النص داخل الحقل */
+    background-color: #222; /* اختيارية: لون خلفية داكن */
+}
+body.dark textarea {
+  color: white; /* لون النص داخل الحقل */
+  background-color: #222; /* اختيارية: لون خلفية داكن */
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #aaaaaa; /* لون النص الرمادي للمكان المخصص (placeholder) */
+}
+
+body.sidebar-collapsed .home-text {
+    transform: scale(1) translateX(110px);
+    transition: transform 0.5s ease;
+}
+body:not(.sidebar-collapsed) .home-text {
+    transform: scale(1) translateX(0); /* العودة إلى المكان الأصلي */
+    transition: transform 0.5s ease; /* تأثير سلس */
+}
+.home-text {
+    transition: transform 0.5s ease;
+}
+
+.slover {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    left: 50%;
+    width: 100%;
+    max-width: 700px;
+}
+
+.home-text {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    top: 10%;
+    left: 11%;
+    max-width: 100%;
+    transform: none;
+    position: absolute; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home-text.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slover.active {
+    opacity: 1;
+    visibility: visible;
+}
+/* التعديلات المطلوبة لتحقيق ما تريده */
+.response {
+    width: 700px !important;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: var(--sidebar-color);
+    margin-top: 10px; /* مسافة من العناصر الأعلى */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* نفس ظل الإدخال */
+    transition: border-color 0.3s ease; /* تأثيرات متناسقة */
+    margin-left: 30px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 1.4rem; 
+}
+
+.response p {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    background-color: transparent; /* إزالة الخلفية المكررة */
+    color: var(--text-color); /* استخدام المتغير للنصوص */
+    margin: 10px 0;
+    padding: 8px;
+}
+  /* الوضع الداكن */
+body.dark .response {
+    background-color: #363636 !important;
+    border-color: #363636;
+    color: white;
+}
+
+.response strong {
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+body.dark  .response strong {
+    color:#A8D0CF;
+}
+/* تعديل الهيكل العام لاحتواء العناصر */
+.home.container {
+    gap: 30px; /* مسافة بين العناصر الرئيسية */
+    padding-bottom: 50px; /* مسافة أسفل الصفحة */
+}
+
+.error {
+    color: #e74c3c;
+    padding: 10px;
+    background: #fdeded;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+.loading {
+    animation: pulse 1.5s infinite;
+    color: #666;
+    text-align: center;
+    font-size: 1.5rem;
+    left: 20%;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+pre {
+    white-space: pre-wrap;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+body.dark pre{
+    background: #363636;
+    border: 1px solid #555;
+}
+
+h3.welcome {
+    font-size: 1.5rem;  /* Slightly smaller for the subheading */
+    color: #555;  /* Lighter color for the subheading */
+
+}
+
+
+/*__________________________*/
+
+
+/*___________________________________________________________*/
+@media (max-width: 768px) {
+    .sidebar {
+        width: 90px !important; /* تأكيد العرض عند التصغير */
+    }
+    
+    .toggle-switch,
+    .mode-text {
+        display: none !important;
+    }
+    
+    .menu-bar .mode {
+        background: transparent !important;
+        padding: 0 !important;
+
+    }
+    .moon-sun {
+        display: flex;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .sidebar li a:hover .icon {
+        color: red !important; /* الحفاظ على اللون عند hover */
+    }
+    
+    /* إظهار الأيقونة فقط */
+    .mode .icon {
+        margin-left: 0 !important;
+        justify-content: center !important;
+    }
+
+}
+@media (max-width: 768px) {
+    .home-text input,
+    .home-text textarea {
+        width: 90%;
+    }
+
+    .home-text {
+        padding: 2px;
+    }
+}
+@media (max-width: 768px) {
+    .home-text { padding: 10px; }
+    input, textarea { width: 90%!important; }
+  }
+@media (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+    .profession{
+        font-size: 0;
+    }
+    .sidebar li .text {
+        font-size: 0;
+    }
+
+    .home-text {
+        padding: 10px 10px 10px 10px;
+        gap: 10px;
+        position: center;
+    }
+
+    .home-text h1 {
+        font-size: 3rem;
+    }
+
+
+    .analogy-question {
+        display: block;
+        width: 60%;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        text-align: right; /* لو كنت تستخدم تخطيط RTL */
+      }
+      
+    .home-text input[type="text"],
+    .home-text textarea {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .cta {
+        font-size: 1.4rem;
+        padding: 8px 20px;
+        text-align: right;
+    }
+
+    .toggle-switch {
+        position: relative;
+        margin-left: 0;
+        width: 40px;
+        height: 20px;
+    }
+
+    .switch::before {
+        height: 13px;
+        width: 13px;
+        left: 4px;
+    }
+
+    body.dark .switch::before {
+        left: 21px;
+    }
+
+    .brand h1 {
+        font-size: 3rem;
+    }
+    
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+}
+/* تأثير الحركة عند دخول المحتوى */
+/* تأثير الحركة عند دخول المحتوى */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* يبدأ من خارج الشاشة على اليسار */
+        opacity: 0; /* يبدأ غير مرئي */
+    }
+    to {
+        transform: translateX(0); /* يصل للمكان الطبيعي */
+        opacity: 1; /* يصبح مرئيًا */
+    }
+}
+
+/* تأثير الـ fade-in مع الحركة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* يدخل من الأسفل */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* يصل للمكان الطبيعي */
+    }
+}
+
