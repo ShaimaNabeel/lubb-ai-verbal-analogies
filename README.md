@@ -41,11 +41,13 @@ It was developed as part of my graduation project, **“Can Machines Think Like 
 
 ![Lubb Home Page](images/lubb-ui-ar.png)
 
+![Lubb Quiz Page](images/lubb-ui-quiz.png)
+
 ![Lubb Home Page](images/slover-ui-ar-white.png)
 
-![Lubb Home Page](images/slover-ui-en-black.png)
+![Lubb Home Page](images/slover-ui-ar-black.png)
 
-![Lubb Quiz Page](images/lubb-ui-quiz.png)
+
 
 
 ## Research Context
