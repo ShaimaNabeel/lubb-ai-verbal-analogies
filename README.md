@@ -1,4 +1,4 @@
-# lubb
+# lubb-ai-verbal-analogies
 Website is a part of graduation project.
 
 
