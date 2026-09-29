@@ -21,24 +21,25 @@ It was developed as part of my graduation project, **“Can Machines Think Like 
 - GPT-4o API
 - DeepSeek API
 
-## Project Structure
+## Project Files
 
-```text
-├── index.html
-├── Lubb_AR.html
-├── Verbal_Analogy_Quiz_AR.html
-├── Verbal_Analogy_Quiz_EN.html
-├── Verbal_Analogy_Tool_GPT4o_AR.html
-├── Verbal_Analogy_Tool_GPT4o_EN.html
-├── Verbal_Analogy_Tool_DEEPSEEK_AR.html
-├── Verbal_Analogy_Tool_DEEPSEEK_EN.html
-├── css files
+- `index.html` — Main landing page
+- `Lubb_AR.html` — Arabic landing page
+- `Verbal_Analogy_Quiz_AR.html` — Arabic quiz
+- `Verbal_Analogy_Quiz_EN.html` — English quiz
+- `Verbal_Analogy_Tool_GPT4o_AR.html` — Arabic GPT-4o solver
+- `Verbal_Analogy_Tool_GPT4o_EN.html` — English GPT-4o solver
+- `Verbal_Analogy_Tool_DEEPSEEK_AR.html` — Arabic DeepSeek solver
+- `Verbal_Analogy_Tool_DEEPSEEK_EN.html` — English DeepSeek solver
+- CSS files — Styling and responsive layout
+- JavaScript files — Quiz logic and model integration
+- SVG files — Visual assets and icons
 
 ## Research Context
+
 The tool supports research into how large language models reason about verbal analogies in Arabic and English. It is connected to a broader evaluation of prompting strategies and LLM reasoning performance.
 
 ## Author
-Shaima Nabeel Albokhari
+
+**Shaima Nabeel Albokhari**  
 Computer Science Graduate | Data & AI
-├── JavaScript files
-└── SVG assets
