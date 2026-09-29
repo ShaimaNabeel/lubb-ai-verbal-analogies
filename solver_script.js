@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const optionsInput = document.getElementById('options');
     const sendBtn = document.querySelector('.cta');
     const resultDiv = document.getElementById('result');
-    const DEEPSEEK_API_KEY = "sk-c0ea48210bc1401abcff35336a53a5a0";
+    const DEEPSEEK_API_KEY = "";
     const button = document.querySelector('.deepseek');
     const optionsContainer = document.querySelector('.model-selector');
 
