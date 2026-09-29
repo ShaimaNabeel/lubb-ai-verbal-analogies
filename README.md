@@ -33,5 +33,12 @@ It was developed as part of my graduation project, **“Can Machines Think Like 
 ├── Verbal_Analogy_Tool_DEEPSEEK_AR.html
 ├── Verbal_Analogy_Tool_DEEPSEEK_EN.html
 ├── css files
+
+## Research Context
+The tool supports research into how large language models reason about verbal analogies in Arabic and English. It is connected to a broader evaluation of prompting strategies and LLM reasoning performance.
+
+## Author
+Shaima Nabeel Albokhari
+Computer Science Graduate | Data & AI
 ├── JavaScript files
 └── SVG assets
