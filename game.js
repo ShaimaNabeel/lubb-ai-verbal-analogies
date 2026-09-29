@@ -25,7 +25,7 @@
  let previousQuestions = [];
 
  // API Config
- const DEEPSEEK_API_KEY = "sk-c0ea48210bc1401abcff35336a53a5a0";
+ const DEEPSEEK_API_KEY = "";
 
  // Loading Screen Elements
  const loadingOverlay = document.getElementById("loadingOverlay");
