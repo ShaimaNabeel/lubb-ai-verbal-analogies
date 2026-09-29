@@ -35,6 +35,13 @@ It was developed as part of my graduation project, **“Can Machines Think Like 
 - JavaScript files — Quiz logic and model integration
 - SVG files — Visual assets and icons
 
+## Screenshots
+
+![Lubb Home Page](images/lubb-home.png)
+
+![Lubb Quiz Page](images/lubb-quiz.png)
+
+
 ## Research Context
 
 The tool supports research into how large language models reason about verbal analogies in Arabic and English. It is connected to a broader evaluation of prompting strategies and LLM reasoning performance.
